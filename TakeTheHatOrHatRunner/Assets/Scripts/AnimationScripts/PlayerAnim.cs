@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class PlayerAnim : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator playerAnimator;
+
+    public void PlayAnimationPlayerIdle()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayAnimationPlayerRun()
     {
-        
+
+    }
+
+    public void PlayAnimationPlayerJump(bool isJump)
+    {
+        //playerAnimator.SetBool("isJumping", true);
+    }
+
+    public void PlayAnimationPlayerDown()
+    {
+
+    }
+
+    public void PlayAnimationPlayerDie()
+    {
+
+    }
+
+    public void StopAnimationPlayerAll()
+    {
+
     }
 }
