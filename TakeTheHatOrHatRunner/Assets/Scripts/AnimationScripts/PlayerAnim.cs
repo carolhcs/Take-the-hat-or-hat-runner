@@ -6,32 +6,33 @@ public class PlayerAnim : MonoBehaviour
 {
     private Animator playerAnimator;
 
-    public void PlayAnimationPlayerIdle()
+    public void PlayAnimationPlayerIdle(bool active)
     {
-
+        playerAnimator.SetBool("IsPlay", !active);
     }
 
-    public void PlayAnimationPlayerRun()
+    public void PlayAnimationPlayerRun(bool active)
     {
-
+        playerAnimator.SetBool("IsPlay", active);
+        playerAnimator.SetBool("IsFloor", active);
     }
 
-    public void PlayAnimationPlayerJump(bool isJump)
+    public void PlayAnimationPlayerJump(bool active)
     {
         //playerAnimator.SetBool("isJumping", true);
     }
 
-    public void PlayAnimationPlayerDown()
+    public void PlayAnimationPlayerDown(bool active)
     {
 
     }
 
-    public void PlayAnimationPlayerDie()
+    public void PlayAnimationPlayerDie(bool active)
     {
 
     }
 
-    public void StopAnimationPlayerAll()
+    public void StopAnimationPlayerAll(bool active)
     {
 
     }

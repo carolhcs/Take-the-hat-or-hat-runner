@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\NotificationScripts\InactivityNotification.cs" />
     <Compile Include="Assets\Scripts\StoreScripts\UseHat.cs" />
     <Compile Include="Assets\Scripts\MonatizationScripts\AdsManager.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\LoadNewScene.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\NotificationScripts\NotificationManager.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\GameStatus.cs" />
@@ -70,26 +71,26 @@
     <Compile Include="Assets\Scripts\TrapScripts\TrapsRegistration.cs" />
     <Compile Include="Assets\Scripts\EnvironmentScripts\ObjectDestroyer.cs" />
     <Compile Include="Assets\Scripts\StoreScripts\Hat.cs" />
+    <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationParams.cs" />
     <Compile Include="Assets\Scripts\NotificationScripts\CreateNewNotificationChannelAndroid.cs" />
+    <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationExample.cs" />
     <Compile Include="Assets\Scripts\NotificationScripts\CreateNewNotificationModelAndroid.cs" />
     <Compile Include="Assets\Scripts\AnimationScripts\EnvironAnim.cs" />
     <Compile Include="Assets\Scripts\StoreScripts\HatBag.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RewardScripts\RewardManager.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\PlayerStatus.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\CloseGame.cs" />
+    <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationIcon.cs" />
     <Compile Include="Assets\Scripts\AnimationScripts\PlayerAnim.cs" />
     <Compile Include="Assets\Scripts\AnimationScripts\TrapAnim.cs" />
     <Compile Include="Assets\Scripts\StoreScripts\BuyHats.cs" />
     <Compile Include="Assets\Scripts\EnvironmentScripts\EnvironmentSpawner.cs" />
+    <Compile Include="Assets\Scripts\Debug\DebugGame.cs" />
     <Compile Include="Assets\Scripts\CoinScripts\Wallet.cs" />
     <Compile Include="Assets\Scripts\CoinScripts\CoinManager.cs" />
-    <Compile Include="Assets\Scripts\Debug\DebugGame.cs" />
-    <Compile Include="Assets\Scripts\MenuScripts\CloseGame.cs" />
-    <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationIcon.cs" />
-    <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationParams.cs" />
-    <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationExample.cs" />
     <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationManager.cs" />
-    <Compile Include="Assets\Scripts\MenuScripts\LoadNewScene.cs" />
+    <Compile Include="Assets\Scripts\ControllerScripts\GameController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

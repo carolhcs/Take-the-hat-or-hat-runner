@@ -6,12 +6,13 @@ using UnityEngine.InputSystem;
 public class PlayerBehavior : MonoBehaviour
 {
 
-    public Rigidbody2D rigidBody;
+    
     public Transform groundCheck;
     public LayerMask groundLayer;
+    private Rigidbody2D rigidBody;
 
     private float jumpingPower = 15f;
-    private float downPower = 30f;
+    private float downPower = 50f;
     private Vector2 jumpDirection;
 
     private PlayerStatus playerStatus;
@@ -55,7 +56,7 @@ public class PlayerBehavior : MonoBehaviour
         if (IsGrounded())
         {
             playerStatus.PlayerIsDown = true;
-            playerAnimator.PlayAnimationPlayerDown();
+            playerAnimator.PlayAnimationPlayerDown(playerStatus.PlayerIsDown);
         } 
         else if (!IsGrounded() && playerStatus.PlayerIsJump)
         {
@@ -75,6 +76,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void GetPlayerComponents()
     {
+        rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
         playerStatus = new PlayerStatus();
         playerStatus.InitPlayerStatus();
         jumpDirection = new Vector2(0.0f, 2.0f);

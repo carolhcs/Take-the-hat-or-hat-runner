@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject playerBody;
-
+    private GameController gameController;
     private PlayerBehavior playerBehavior;
     
 
@@ -17,11 +17,9 @@ public class PlayerController : MonoBehaviour
         GetPlayerComponents();
     }
 
-    public void PauseGame(bool isPaused)
+    public void PauseGame()
     {
-        isPaused = !isPaused;
-        if(isPaused) Time.timeScale = 0;
-        else Time.timeScale = 1;
+        gameController.PauseGame(gameController.gameStatus.IsPause);
     }
 
     public void PlayerJump()
@@ -37,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private void GetPlayerComponents()
     {
         playerBehavior = playerBody.GetComponent<PlayerBehavior>();
+        gameController = FindObjectOfType<GameController>();
     }
 
 

@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wallet : MonoBehaviour
+public static class Wallet
 {
-    // Start is called before the first frame update
-    void Start()
+    public static int Coin { get; set; }
+
+    public static void ReceiveCoin(int coinPlus)
     {
-        
+        Coin += coinPlus;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void RemoveCoin(int coinMinus)
     {
-        
+        Coin -= coinMinus;
     }
+
+
 }

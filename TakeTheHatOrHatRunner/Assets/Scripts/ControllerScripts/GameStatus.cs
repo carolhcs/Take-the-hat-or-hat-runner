@@ -2,18 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameStatus : MonoBehaviour
+public class GameStatus
 {
     public int Reward { get; set; }
+    public int Coin { get; set; }
+    public bool IsPlay { get; set; }
+    public bool IsPause { get; set; }
+    public bool IsFinishWin { get; set; }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
