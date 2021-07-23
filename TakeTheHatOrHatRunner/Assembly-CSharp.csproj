@@ -88,9 +88,10 @@
     <Compile Include="Assets\Scripts\EnvironmentScripts\EnvironmentSpawner.cs" />
     <Compile Include="Assets\Scripts\Debug\DebugGame.cs" />
     <Compile Include="Assets\Scripts\CoinScripts\Wallet.cs" />
+    <Compile Include="Assets\Scripts\ControllerScripts\GameController.cs" />
     <Compile Include="Assets\Scripts\CoinScripts\CoinManager.cs" />
     <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationManager.cs" />
-    <Compile Include="Assets\Scripts\ControllerScripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\EnvironmentScripts\EnvironmentStatus.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
