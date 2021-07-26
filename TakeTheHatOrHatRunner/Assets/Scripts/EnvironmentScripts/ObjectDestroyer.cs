@@ -14,7 +14,7 @@ public class ObjectDestroyer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (SearchTag(collision.gameObject.tag)) DestroyObject(collision.gameObject);
+        if (SearchTag(collision.gameObject.tag)) DestroyObject(collision.gameObject, collision.gameObject.tag);
     }
 
     private bool SearchTag(string tag)
@@ -26,9 +26,9 @@ public class ObjectDestroyer : MonoBehaviour
         return false;
     }
 
-    private void DestroyObject(GameObject gameObject)
+    private void DestroyObject(GameObject gameObject, string tag)
     {
         Destroy(gameObject);
-        objectSpawner.SpawnObjectByChance();
+        objectSpawner.SpawnObjectByChance(tag);
     }
 }

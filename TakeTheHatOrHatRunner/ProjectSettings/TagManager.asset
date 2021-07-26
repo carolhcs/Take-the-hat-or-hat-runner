@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Destroyer
+  - Trap
   layers:
   - Default
   - TransparentFX

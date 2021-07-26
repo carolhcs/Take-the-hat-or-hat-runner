@@ -123,6 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   environmentObjectId: id
-  directionMove: 0
-  kindVelocity: 0
+  directionMove: 1
+  kindVelocity: 1
   fixedVelocity: 1

@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnvironmentStatus : MonoBehaviour
 {
 
+    public string environmentId = "StartEnv";
+    public string environmentName = "New Environment";
 
-    
+
     void Start()
     {
         

@@ -30,6 +30,7 @@ public class EnvironmentBehavior : MonoBehaviour
     public void SetInitVelocity()
     {
         Velocity = fixedVelocity;
+        if (this.gameObject.tag.Equals("Trap")) Velocity += this.GetComponent<TrapsRegistration>().movementSpeed;
     }
 
     public void MoveObjectOnDirection()

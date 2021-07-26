@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class TrapsRegistration : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string trapId = "Id";
+    public enum KIND_TRAP { STOPED, MOVEMENT };
+    public KIND_TRAP kindTrap;
+    public float movementSpeed = 0f;
+    public float height = 0f;
+    // ... Var de area que essa tarp pode aparecer
 }

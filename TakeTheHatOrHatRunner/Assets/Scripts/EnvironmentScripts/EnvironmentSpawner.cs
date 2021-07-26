@@ -11,20 +11,24 @@ public class EnvironmentSpawner : MonoBehaviour
     public string spawnerId = "Id";
 
     public GameObject[] objectSpawnerPrefab;
+    public TrapsManager trapsManager;
 
     //public SpawnersChance[] SelectChance = new SpawnersChance[10]; // TODO: 
 
-    public void SpawnObjectByChance()
+    public void SpawnObjectByChance(string kind)
     {
         //TODO: ...
         int index = 0;
 
-        InstantiateObject(objectSpawnerPrefab[index]);
+        if (kind.Equals("Trap")) InstantiateObject(trapsManager.ChooseTrap(), -1.5f);
+        else if (kind.Equals("Floor")) InstantiateObject(objectSpawnerPrefab[index]);
+
     }
 
-    public void SpawnObjectByIndex(int index)
+    public void SpawnObjectByIndex(int index, string kind)
     {
-        InstantiateObject(objectSpawnerPrefab[index]);
+        if (kind.Equals("Trap")) InstantiateObject(trapsManager.ChooseTrap(), -1.5f);
+        else if (kind.Equals("Floor")) InstantiateObject(objectSpawnerPrefab[index]);
     }
 
     private void InstantiateObject(GameObject gameObjectPrefab)
@@ -35,7 +39,16 @@ public class EnvironmentSpawner : MonoBehaviour
 
         newGameObject.transform.SetParent(this.gameObject.transform);
     }
-    
+
+    private void InstantiateObject(GameObject gameObjectPrefab, float yPosition)
+    {
+        GameObject newGameObject = Instantiate(gameObjectPrefab,
+            new Vector3(this.gameObject.transform.position.x, yPosition,
+            this.gameObject.transform.position.z), Quaternion.identity);
+
+        newGameObject.transform.SetParent(this.gameObject.transform);
+    }
+
 }
 
 /// <summary>
