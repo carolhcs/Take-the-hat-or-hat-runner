@@ -2,15 +2,23 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AdsManager
-    - Assets.SimpleAndroidNotifications.NotificationExample
     - CloseGame
-    - CoinManager
+    - CreateEnvironment
     - CreateNewNotificationChannelAndroid
     - CreateNewNotificationModelAndroid
     - DebugGame
+    - EnvironmentBehavior
+    - EnvironmentSpawner
+    - GameController
     - GameManager
     - InactivityNotification
-    - LoadNewScenne
+    - LoadNewScene
+    - ObjectDestroyer
+    - PlayerAnim
+    - PlayerBehavior
+    - PlayerController
+    - TrapsManager
+    - TrapsRegistration
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -35,22 +43,42 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.EventSystems.TouchInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/MenuScene.unity:
+    Assets/Scenes/AboutScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/GameScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -63,46 +91,76 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1530}
     - Class: 114
-      Script: {instanceID: 1632}
+      Script: {instanceID: 1636}
     - Class: 114
-      Script: {instanceID: 1664}
+      Script: {instanceID: 1668}
     - Class: 114
-      Script: {instanceID: 1860}
+      Script: {instanceID: 1864}
     - Class: 114
-      Script: {instanceID: 2236}
+      Script: {instanceID: 1932}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2242}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2430}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 3412}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 3782}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 4206}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 4272}
+      Script: {instanceID: 3418}
     - Class: 114
-      Script: {instanceID: 4338}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 4658}
+      Script: {instanceID: 3786}
     - Class: 114
-      Script: {instanceID: 5738}
+      Script: {instanceID: 3788}
     - Class: 114
-      Script: {instanceID: 17778}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 22736}
+      Script: {instanceID: 4214}
     - Class: 114
-      Script: {instanceID: 23888}
+      Script: {instanceID: 4282}
+    - Class: 114
+      Script: {instanceID: 4348}
+    - Class: 114
+      Script: {instanceID: 4506}
+    - Class: 114
+      Script: {instanceID: 4668}
+    - Class: 114
+      Script: {instanceID: 4786}
+    - Class: 114
+      Script: {instanceID: 5180}
+    - Class: 114
+      Script: {instanceID: 5310}
+    - Class: 114
+      Script: {instanceID: 5582}
+    - Class: 114
+      Script: {instanceID: 5592}
+    - Class: 114
+      Script: {instanceID: 5722}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,7 +179,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/SimpleAndroidNotifications/DemoScene.unity:
+    Assets/Scenes/MenuScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -134,30 +192,46 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1530}
     - Class: 114
-      Script: {instanceID: 2236}
+      Script: {instanceID: 1636}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 1668}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 1864}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 1932}
     - Class: 114
-      Script: {instanceID: 3292}
+      Script: {instanceID: 2242}
     - Class: 114
-      Script: {instanceID: 3412}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 5720}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 5742}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 23534}
+      Script: {instanceID: 3418}
+    - Class: 114
+      Script: {instanceID: 3788}
+    - Class: 114
+      Script: {instanceID: 4214}
+    - Class: 114
+      Script: {instanceID: 4282}
+    - Class: 114
+      Script: {instanceID: 4348}
+    - Class: 114
+      Script: {instanceID: 4668}
+    - Class: 114
+      Script: {instanceID: 4786}
+    - Class: 114
+      Script: {instanceID: 5592}
+    - Class: 114
+      Script: {instanceID: 5722}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -165,6 +239,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -174,9 +250,56 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 258
+    Assets/Scenes/ScoreScene.unity:
+    - Class: 1
       Script: {instanceID: 0}
-    - Class: 850595691
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/SettingsScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/StoreScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -217,7 +340,7 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 1152f0e27b83d3b9e32ee80bed4ff5a7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -314,6 +437,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadNewScene
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Notifications.Android.dll
     namespaceName: Unity.Notifications.Android
     className: AndroidReceivedNotificationMainThreadDispatcher
@@ -361,7 +490,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 41934971e17ed01dc78238b1baae7491
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerBehavior
@@ -385,12 +514,6 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameStatus
-  - hash:
-      serializedVersion: 2
       Hash: 5f170942ee57c7a568f5bcfc7521adea
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -403,7 +526,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 54fce8bcf14ae43f4d2a57db4cb5a602
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnvironmentBehavior
@@ -595,7 +718,7 @@ ScriptsOnlyBuild:
     className: InputActionImporterEditor
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 85b3fee9cfbee3332a1f3f13e4e37a13
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TrapsManager
@@ -607,7 +730,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e113a008271c376732e5dd3bf157c519
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TrapsRegistration
@@ -643,7 +766,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 64564f36eb612e30823270ddffd96b3a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectDestroyer
@@ -715,6 +838,12 @@ ScriptsOnlyBuild:
     className: InputSettings
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.SimpleAndroidNotifications
+    className: NotificationExample
+  - hash:
+      serializedVersion: 2
       Hash: 87cef3c82381dc586f6772c3e27561b6
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -781,7 +910,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5e102eb579a3f0890629f699658cb463
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -829,12 +958,6 @@ ScriptsOnlyBuild:
     className: TrackedDeviceRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerStatus
-  - hash:
-      serializedVersion: 2
       Hash: f17a7afbb6fc4d6b5c3ba20ed1c93f68
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.UI
@@ -865,6 +988,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CloseGame
+  - hash:
+      serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -887,6 +1016,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 00b73a8b0b00075be78e514b6db44526
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnvironmentStatus
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -949,6 +1084,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 91015f162dbd138abdb8e16f18bc8b80
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CreateEnvironment
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -967,22 +1108,22 @@ ScriptsOnlyBuild:
     className: InputSystemObject
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: b0e46d2178503e10963e310a036e0d31
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnvironmentSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: bf8af823ba4e725d9ebc03e73f3fa040
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DebugGame
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Wallet
   - hash:
       serializedVersion: 2
       Hash: 21a597af000da536a7adc9efe10b8d5d
@@ -997,6 +1138,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1009,12 +1156,6 @@ ScriptsOnlyBuild:
     className: RemoteInputPlayerConnection
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CoinManager
-  - hash:
-      serializedVersion: 2
       Hash: abf1930d8126d0b2e00e9449129a0190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1025,32 +1166,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: bf8af823ba4e725d9ebc03e73f3fa040
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DebugGame
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CloseGame
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Assets.SimpleAndroidNotifications
-    className: NotificationExample
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LoadNewScenne
   platform: 13
   scenePathNames:
   - Assets/Scenes/MenuScene.unity
-  - Assets/SimpleAndroidNotifications/DemoScene.unity
-  playerPath: D:/UnityProjects/TakeTheHatOrHatRunner/Take-the-hat-or-hat-runner/APK-Android/TakeTheHat.apk
+  - Assets/Scenes/GameScene.unity
+  - Assets/Scenes/SettingsScene.unity
+  - Assets/Scenes/ScoreScene.unity
+  - Assets/Scenes/StoreScene.unity
+  - Assets/Scenes/AboutScene.unity
+  playerPath: D:/UnityProjects/TakeTheHatOrHatRunner/Take-the-hat-or-hat-runner/APK/TakeTheHat.apk

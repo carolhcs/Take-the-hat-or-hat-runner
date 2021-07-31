@@ -10,4 +10,15 @@ public class GameStatus
     public bool IsPause { get; set; }
     public bool IsFinishWin { get; set; }
 
+    public GameStatus() { }
+    
+    public GameStatus(int reward, int coin, bool isPlay, bool isPause, bool isFinishWin)
+    {
+        this.Reward = reward;
+        this.Coin = coin;
+        this.IsPlay = isPlay;
+        this.IsPause = isPause;
+        this.IsFinishWin = isFinishWin;
+    }
+
 }

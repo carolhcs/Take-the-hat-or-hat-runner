@@ -7,9 +7,14 @@ public class GameController : MonoBehaviour
 
     public GameStatus gameStatus;
 
+    void Awake()
+    {
+        gameStatus = new GameStatus(0, 0, true, false, false);
+    }
+
     void Start()
     {
-        gameStatus = new GameStatus();
+        
     }
 
     // GamePlay Functions

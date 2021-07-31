@@ -17,6 +17,11 @@ public class ObjectDestroyer : MonoBehaviour
         if (SearchTag(collision.gameObject.tag)) DestroyObject(collision.gameObject, collision.gameObject.tag);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (SearchTag(collision.gameObject.tag)) DestroyObject(collision.gameObject, collision.gameObject.tag);
+    }
+
     private bool SearchTag(string tag)
     {
         for(int i = 0; i < tagsToDestroy.Length; i++)
