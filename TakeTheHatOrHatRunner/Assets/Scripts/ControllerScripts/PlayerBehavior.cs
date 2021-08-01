@@ -83,5 +83,10 @@ public class PlayerBehavior : MonoBehaviour
         playerAnimator = this.gameObject.GetComponent<PlayerAnim>();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameController gameController = FindObjectOfType<GameController>();
+        if (collision.gameObject.tag.Equals("Trap")) gameController.PauseGame(gameController.gameStatus.IsPause);
+    }
 
 }

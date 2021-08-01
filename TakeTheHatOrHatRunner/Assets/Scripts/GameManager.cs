@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
 
     public GameController gameController;
+    public RewardManager rewardManager;
+
     public static GameManager Instance;
 
     void Awake()

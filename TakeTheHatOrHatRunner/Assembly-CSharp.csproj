@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\EnvironmentScripts\EnvironmentStatus.cs" />
     <Compile Include="Assets\Scripts\AnimationScripts\PlayerAnim.cs" />
     <Compile Include="Assets\Scripts\AnimationScripts\TrapAnim.cs" />
+    <Compile Include="Assets\Scripts\EnvironmentScripts\CreateEnvironment.cs" />
     <Compile Include="Assets\Scripts\StoreScripts\BuyHats.cs" />
     <Compile Include="Assets\Scripts\EnvironmentScripts\EnvironmentSpawner.cs" />
     <Compile Include="Assets\Scripts\Debug\DebugGame.cs" />
@@ -92,7 +93,10 @@
     <Compile Include="Assets\Scripts\ControllerScripts\GameController.cs" />
     <Compile Include="Assets\Scripts\CoinScripts\CoinManager.cs" />
     <Compile Include="Assets\Assets\SimpleAndroidNotifications\NotificationManager.cs" />
-    <Compile Include="Assets\Scripts\EnvironmentScripts\CreateEnvironment.cs" />
+    <Compile Include="Assets\Scripts\RewardScripts\RewardController.cs" />
+    <Compile Include="Assets\Scripts\RewardScripts\CoinController.cs" />
+    <Compile Include="Assets\Scripts\DataScripts\DataManager.cs" />
+    <Compile Include="Assets\Scripts\DataScripts\LocalSave.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

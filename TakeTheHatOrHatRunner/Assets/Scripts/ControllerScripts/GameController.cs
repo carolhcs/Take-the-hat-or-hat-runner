@@ -30,5 +30,11 @@ public class GameController : MonoBehaviour
         gameStatus.IsPause = pause;
         if (pause) Time.timeScale = 0;
         else Time.timeScale = 1;
+
+    }
+
+    private IEnumerator WaitForSecondsCoroutine(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }
