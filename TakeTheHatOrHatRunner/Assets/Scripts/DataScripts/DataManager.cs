@@ -2,33 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DataManager : MonoBehaviour
+/// <summary>
+/// Dados de jogo importantes para serem salvos
+/// Variaveis Constantes
+/// </summary>
+public static class DataManager
 {
     // Data
-
+    #region Data
     // Coin
-    public int Coin { get; set; }
-    public int TotalCoin { get; set; }
-    public int SpentCoins { get; set; }
+    public static int Coin { get; set; }
+    public static int TotalCoin { get; set; }
+    public static int SpentCoins { get; set; }
 
     // Reward
-    public int BestReward { get; set; }
-    public int LastReward { get; set; }
+    public static int BestReward { get; set; }
+    public static int LastReward { get; set; }
 
     // Distance
-    public int BestTravelleDistance { get; set; }
-    public int LastTravelleDistance { get; set; }
+    public static int BestTravelleDistance { get; set; }
+    public static int LastTravelleDistance { get; set; }
 
     // Time
-    public int BestGameTime { get; set; }
-    public int LastGameTime { get; set; }
+    public static int BestGameTime { get; set; }
+    public static int LastGameTime { get; set; }
 
     // Hats
-    public int TotalHats { get; set; }
-    public string[] HatInBagNames { get; set; }
-    public int[] HatInBagIds { get; set; }
+    public static int TotalHats { get; set; }
+    public static string[] HatInBagNames { get; set; } // Array
+    public static int[] HatInBagIds { get; set; }
 
     // Monetization
+    public static int AdsRewardedView { get; set; }
+    public static int AdsInsterstitionView { get; set; }
+    public static int TotalAdsView { get; set; }
+
+    #endregion Data
 
 
+    // Constants
+    #region Constants
+
+
+    #endregion Constants
 }
