@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
 
     public void PauseGame()
     {
-        gameController.PauseGame(gameController.gameStatus.IsPause);
+        gameController.PauseGame(GameStatus.IsPause);
+
     }
 
     public void PlayerJump()

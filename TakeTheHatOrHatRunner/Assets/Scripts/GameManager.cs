@@ -12,11 +12,13 @@ public class GameManager : MonoBehaviour
 
     public GameController gameController;
     public RewardManager rewardManager;
+    public LocalSave save;
 
     public static GameManager Instance;
 
     void Awake()
     {
+        // Instance
         if (Instance != null)
         {
             GameObject.Destroy(Instance);
@@ -25,7 +27,14 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
-        }        
+        }
+        // Inicializar dados
+        if (SceneManager.GetActiveScene().name.Equals("MenuScene"))
+        {
+            DataManager.InitializeData();
+            save.LoadGameData();
+        }
+
     }
 
     void Start()
@@ -44,13 +53,14 @@ public class GameManager : MonoBehaviour
         switch (scenneName)
         {
             case "GameScene":
-                gameController.PauseGame(gameController.gameStatus.IsPause);
+                gameController.PauseGame(GameStatus.IsPause);
                 break;
             case "":
                 //...
                 break;
         }
     }
+
 
 
 }

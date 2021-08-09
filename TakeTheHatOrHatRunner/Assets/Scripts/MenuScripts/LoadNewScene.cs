@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewScene : MonoBehaviour
 {
+    public LocalSave save;
+
     public void LoadScene(string scenneName)
     {
+        save.SaveGameData();
         SceneManager.LoadScene(scenneName);
     }
 

@@ -2,20 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnvironmentStatus : MonoBehaviour
+public static class EnvironmentStatus
 {
 
-    public string environmentId = "StartEnv";
-    public string environmentName = "New Environment";
+    public static string environmentId = "StartEnv";
+    public static string environmentName = "New Environment";
 
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

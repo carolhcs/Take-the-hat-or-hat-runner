@@ -37,12 +37,35 @@ public static class DataManager
     public static int AdsInsterstitionView { get; set; }
     public static int TotalAdsView { get; set; }
 
+
+    public static void InitializeData()
+    {
+        Coin = 0;
+        TotalCoin = 0;
+        SpentCoins = 0;
+        BestReward = 0;
+        LastReward = 0;
+        BestTravelleDistance = 0;
+        LastTravelleDistance = 0;
+        BestGameTime = 0;
+        LastGameTime = 0;
+        TotalHats = 0;
+        AdsRewardedView = 0;
+        AdsInsterstitionView = 0;
+        TotalAdsView = 0;
+    }
+
     #endregion Data
 
 
     // Constants
     #region Constants
 
+    public const int EXTRA_LIFES_GAME = 1;
+    public const int MORE_COINS = 2;
+    public const float MAX_SPEED = 30f; // Testar
+    public const float INITIAL_SPEED = 3f;
+    public const float SPEED_INCREASE_RATE = 3f;
 
     #endregion Constants
 }

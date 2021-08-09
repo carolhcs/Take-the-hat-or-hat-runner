@@ -15,7 +15,6 @@ public class PlayerBehavior : MonoBehaviour
     private float downPower = 50f;
     private Vector2 jumpDirection;
 
-    private PlayerStatus playerStatus;
     private PlayerAnim playerAnimator;
 
 
@@ -37,15 +36,15 @@ public class PlayerBehavior : MonoBehaviour
         {
             //rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpingPower); // Use velocity to jump
             rigidBody.AddForce(jumpDirection * jumpingPower, ForceMode2D.Impulse);
-            playerStatus.PlayerIsJump = true;
-            playerAnimator.PlayAnimationPlayerJump(playerStatus.PlayerIsJump);
+            PlayerStatus.PlayerIsJump = true;
+            playerAnimator.PlayAnimationPlayerJump(PlayerStatus.PlayerIsJump);
         }
     }
 
     public void StopJumpBehavior()
     {
-        playerStatus.PlayerIsJump = false;
-        playerAnimator.PlayAnimationPlayerJump(playerStatus.PlayerIsJump);
+        PlayerStatus.PlayerIsJump = false;
+        playerAnimator.PlayAnimationPlayerJump(PlayerStatus.PlayerIsJump);
     }
 
     /// <summary>
@@ -55,10 +54,10 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (IsGrounded())
         {
-            playerStatus.PlayerIsDown = true;
-            playerAnimator.PlayAnimationPlayerDown(playerStatus.PlayerIsDown);
+            PlayerStatus.PlayerIsDown = true;
+            playerAnimator.PlayAnimationPlayerDown(PlayerStatus.PlayerIsDown);
         } 
-        else if (!IsGrounded() && playerStatus.PlayerIsJump)
+        else if (!IsGrounded() && PlayerStatus.PlayerIsJump)
         {
             rigidBody.AddForce(-transform.up * downPower, ForceMode2D.Impulse);
         }
@@ -66,7 +65,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public void StopDownBehavior()
     {
-        playerStatus.PlayerIsDown = false;
+        PlayerStatus.PlayerIsDown = false;
     }
 
     private bool IsGrounded()
@@ -77,16 +76,22 @@ public class PlayerBehavior : MonoBehaviour
     private void GetPlayerComponents()
     {
         rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
-        playerStatus = new PlayerStatus();
-        playerStatus.InitPlayerStatus();
+        PlayerStatus.InitPlayerStatus();
         jumpDirection = new Vector2(0.0f, 2.0f);
         playerAnimator = this.gameObject.GetComponent<PlayerAnim>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Dead()
     {
         GameController gameController = FindObjectOfType<GameController>();
-        if (collision.gameObject.tag.Equals("Trap")) gameController.PauseGame(gameController.gameStatus.IsPause);
+        gameController.PauseGame(GameStatus.IsPause);
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.gameObject.tag.Equals("Trap")) Dead();
     }
 
 }

@@ -5,20 +5,20 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-public class PlayerStatus
+public static class PlayerStatus
 {
-    public bool PlayerIsLife { get; set; }
+    public static bool PlayerIsLife { get; set; }
 
-    public Hat PlayerHat { get; set; }
+    public static Hat PlayerHat { get; set; }
 
-    public int PlayerBestRewardRank { get; set; }
-    public int PlayerGameRewardRank { get; set; }
+    public static int PlayerBestRewardRank { get; set; }
+    public static int PlayerGameRewardRank { get; set; }
 
-    public bool PlayerIsRun { get; set; }
-    public bool PlayerIsJump { get; set; }
-    public bool PlayerIsDown { get; set; }
+    public static bool PlayerIsRun { get; set; }
+    public static bool PlayerIsJump { get; set; }
+    public static bool PlayerIsDown { get; set; }
 
-    public void InitPlayerStatus()
+    public static void InitPlayerStatus()
     {
         PlayerIsLife = true;
         PlayerGameRewardRank = 0;
@@ -28,7 +28,7 @@ public class PlayerStatus
         GetSavedStatus();
     }
 
-    public void GetSavedStatus()
+    public static void GetSavedStatus()
     {
 
     }
