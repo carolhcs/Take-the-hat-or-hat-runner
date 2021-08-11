@@ -12,7 +12,7 @@ public class EnvironmentBehavior : MonoBehaviour
     public _directionMovement directionMove;
     public enum _kindVelocity { fixedVelocity, variantVelocity}
     public _kindVelocity kindVelocity;
-    public float fixedVelocity = 1f;
+    private float fixedVelocity = 1f;
 
     private float Velocity { get; set; }
 

@@ -29,8 +29,10 @@ public static class DataManager
 
     // Hats
     public static int TotalHats { get; set; }
-    public static string[] HatInBagNames { get; set; } // Array
-    public static int[] HatInBagIds { get; set; }
+    public static List<string> HatInBagNames = new List<string>();// Array
+    public static List<int> HatInBagIds = new List<int>();
+    //public static string[] HatInBagNames { get; set; } // Array
+    //public static int[] HatInBagIds { get; set; }
 
     // Monetization
     public static int AdsRewardedView { get; set; }
@@ -53,6 +55,8 @@ public static class DataManager
         AdsRewardedView = 0;
         AdsInsterstitionView = 0;
         TotalAdsView = 0;
+        HatInBagNames.Add("Default");
+        HatInBagIds.Add(0);
     }
 
     #endregion Data
@@ -64,8 +68,12 @@ public static class DataManager
     public const int EXTRA_LIFES_GAME = 1;
     public const int MORE_COINS = 2;
     public const float MAX_SPEED = 30f; // Testar
-    public const float INITIAL_SPEED = 3f;
+    public const float INITIAL_SPEED = 1f;
     public const float SPEED_INCREASE_RATE = 3f;
+    public const float TIMER = 60f;
+    public const int REWARD_1 = 1;
+    public const int REWARD_2 = 2;
+    public const int REWARD_3 = 3;
 
     #endregion Constants
 }

@@ -61,53 +61,60 @@ public class LocalSave : MonoBehaviour
         }
     }
 
-    public void SetStringArray(string nameId, string[] stringArray)
+    public void SetStringArray(string nameId, List<string> stringArray)//string[] stringArray
     {
-        for(int i = 0; i < stringArray.Length; i++)
+        if (stringArray != null)
         {
-            nameId = nameId + i;
-            PlayerPrefs.SetString(nameId, stringArray[i]);
+            for (int i = 0; i < stringArray.Count; i++)
+            {
+                nameId = nameId + i;
+                PlayerPrefs.SetString(nameId, stringArray[i]);
+            }
         }
     }
 
-    public void SetIntArray(string nameId, int[] intArray)
+    public void SetIntArray(string nameId, List<int> intArray)//int[] intArray
     {
-        for (int i = 0; i < intArray.Length; i++)
-        {
-            nameId = nameId + i;
-            PlayerPrefs.SetInt(nameId, intArray[i]);
+        if (intArray != null) {
+            for (int i = 0; i < intArray.Count; i++)
+            {
+                nameId = nameId + i;
+                PlayerPrefs.SetInt(nameId, intArray[i]);
+            }
         }
     }
 
-    public string[] GetStringArray(string nameId)
+    public List<string> GetStringArray(string nameId)
     {
-        string[] stringArray;
+        List<string> stringArray = new List<string>();
         int i = 0;
         while (PlayerPrefs.HasKey(nameId + i))
         {
+            stringArray.Add(PlayerPrefs.GetString(nameId + i));
             i++;
         }
-        stringArray = new string[i];
+        /*stringArray = new string[i];
         for(int j = 0; j < i; j++)
         {
             stringArray[j] = PlayerPrefs.GetString(nameId + j);
-        }
+        }*/
         return stringArray;
     }
 
-    public int[] GetIntArray(string nameId)
+    public List<int> GetIntArray(string nameId)
     {
-        int[] intArray;
+        List<int> intArray = new List<int>();
         int i = 0;
         while (PlayerPrefs.HasKey(nameId + i))
         {
+            intArray.Add(PlayerPrefs.GetInt(nameId + i));
             i++;
         }
-        intArray = new int[i];
+        /*intArray = new int[i];
         for (int j = 0; j < i; j++)
         {
             intArray[j] = PlayerPrefs.GetInt(nameId + j);
-        }
+        }*/
         return intArray;
     }
 
