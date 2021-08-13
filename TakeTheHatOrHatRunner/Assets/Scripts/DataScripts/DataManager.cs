@@ -67,9 +67,8 @@ public static class DataManager
 
     public const int EXTRA_LIFES_GAME = 1;
     public const int MORE_COINS = 2;
-    public const float MAX_SPEED = 30f; // Testar
-    public const float INITIAL_SPEED = 1f;
-    public const float SPEED_INCREASE_RATE = 3f;
+    public const float MAX_SPEED = 10f; // Testar
+    public const float INITIAL_SPEED = 1f; // Min 1 Max 10
     public const float TIMER = 60f;
     public const int REWARD_1 = 1;
     public const int REWARD_2 = 2;

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Controlador e contador de tempo
+/// Referencia de tempo para o jogo
+/// </summary>
 public class TimeManager : MonoBehaviour
 {
     public float Seconds { get; set; }
@@ -41,5 +45,17 @@ public class TimeManager : MonoBehaviour
             Minuts = 0;
         }
         
+    }
+
+    private void VelocityTimers()
+    {
+        float timer = 10;
+        // velocidade
+        timer -= Time.fixedDeltaTime;
+        if(timer <= 0)
+        {
+
+        }
+
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 
+/// Objeto que destroi outros objetos que colidem com ele
 /// </summary>
 public class ObjectDestroyer : MonoBehaviour
 {
