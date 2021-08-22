@@ -1599,6 +1599,7 @@ RectTransform:
   m_Children:
   - {fileID: 2052510364}
   - {fileID: 1327926092}
+  - {fileID: 2025124618}
   m_Father: {fileID: 219597528}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2980,6 +2981,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156245051}
   m_CullTransparentMesh: 1
+--- !u!114 &1194340611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8259980330982918555, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+  m_PrefabInstance: {fileID: 5103971360509329311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b84f074edecb24fa7c2ca7da1cfea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1223459042
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,6 +5388,87 @@ Transform:
   m_Father: {fileID: 949507665}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2025124617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2025124618}
+  - component: {fileID: 2025124620}
+  - component: {fileID: 2025124619}
+  m_Layer: 5
+  m_Name: TextBarra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2025124618
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025124617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 588638866}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 83.430786, y: 563.38}
+  m_SizeDelta: {x: 88.2461, y: 130}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2025124619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025124617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4f2a07f4c14085440bd4138577440f9a, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '/
+
+'
+--- !u!222 &2025124620
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025124617}
+  m_CullTransparentMesh: 1
 --- !u!1 &2052510363
 GameObject:
   m_ObjectHideFlags: 0
@@ -5410,8 +5503,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -49.886677, y: 563.38}
-  m_SizeDelta: {x: 354.881, y: 130}
+  m_AnchoredPosition: {x: -84.15932, y: 563.38}
+  m_SizeDelta: {x: 286.3357, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2052510365
 MonoBehaviour:
@@ -5446,7 +5539,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0000000/
+  m_Text: '0000000
 
 '
 --- !u!222 &2052510366
@@ -5889,5 +5982,41 @@ PrefabInstance:
       propertyPath: endScreen
       value: 
       objectReference: {fileID: 1225324596}
+    - target: {fileID: 5662185102176041089, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: rewardTime.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662185102176041089, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: rewardTime.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662185102176041089, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: rewardTime.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1194340611}
+    - target: {fileID: 5662185102176041089, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: rewardTime.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662185102176041089, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: rewardTime.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddRewards
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662185102176041089, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: rewardTime.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RewardController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662185102176041089, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: rewardTime.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8259980330982918555, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: txtBestReward
+      value: 
+      objectReference: {fileID: 1327926093}
+    - target: {fileID: 8259980330982918555, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}
+      propertyPath: txtGameReward
+      value: 
+      objectReference: {fileID: 2052510365}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7507bb92b5dcdaa4eb7126e226ec31a3, type: 3}

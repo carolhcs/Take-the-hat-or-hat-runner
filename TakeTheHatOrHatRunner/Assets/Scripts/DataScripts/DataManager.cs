@@ -70,9 +70,16 @@ public static class DataManager
     public const float MAX_SPEED = 10f; // Testar
     public const float INITIAL_SPEED = 1f; // Min 1 Max 10
     public const float TIMER = 60f;
-    public const int REWARD_1 = 1;
-    public const int REWARD_2 = 2;
-    public const int REWARD_3 = 3;
+    public const float TIMER_REWARD = 5f;
+    public const float SPEED_TIMER_1 = 10f;
+    public const float SPEED_TIMER_2 = 15f;
+    public const float SPEED_TIMER_3 = 30f;
+    public const float SPEED_INCREASE_1 = 0.3f;
+    public const float SPEED_INCREASE_2 = 0.2f;
+    public const float SPEED_INCREASE_3 = 0.1f;
+    public const int REWARD_1 = 1000; // Reward
+    public const int REWARD_2 = 2000; // Double Reward
+    public const int REWARD_3 = 10000; // Extra Reward
 
     #endregion Constants
 }
