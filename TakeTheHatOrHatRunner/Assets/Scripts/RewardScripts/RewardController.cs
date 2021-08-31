@@ -13,12 +13,12 @@ public class RewardController : MonoBehaviour
     private void Start()
     {
         GameReward = 0;
-        txtBestReward.text = BestRewardSave.ToString();
+        txtBestReward.text = BestRewardSave.ToString("00000");
     }
 
     private void Update()
     {
-        txtGameReward.text = GameReward.ToString();
+        txtGameReward.text = GameReward.ToString("0000000");
     }
 
     public void AddRewards()

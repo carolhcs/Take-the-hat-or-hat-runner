@@ -8,6 +8,10 @@ using UnityEngine;
 public class EnvironmentSpawner : MonoBehaviour
 {
 
+    //TODO: Adicionar chance de gerar uma trap a mais quando gerar uma com colisão
+    //(espaço entre traps 4, pode ser 2 ou 3 o espaço para a nova)
+    // Chance aumenta conforme mais pontos
+
     public string spawnerId = "Id";
 
     public GameObject[] objectSpawnerPrefab;

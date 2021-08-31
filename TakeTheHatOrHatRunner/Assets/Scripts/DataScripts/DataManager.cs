@@ -68,18 +68,21 @@ public static class DataManager
     public const int EXTRA_LIFES_GAME = 1;
     public const int MORE_COINS = 2;
     public const float MAX_SPEED = 10f; // Testar
-    public const float INITIAL_SPEED = 1f; // Min 1 Max 10
-    public const float TIMER = 60f;
-    public const float TIMER_REWARD = 5f;
-    public const float SPEED_TIMER_1 = 10f;
-    public const float SPEED_TIMER_2 = 15f;
-    public const float SPEED_TIMER_3 = 30f;
-    public const float SPEED_INCREASE_1 = 0.3f;
-    public const float SPEED_INCREASE_2 = 0.2f;
-    public const float SPEED_INCREASE_3 = 0.1f;
-    public const int REWARD_1 = 1000; // Reward
-    public const int REWARD_2 = 2000; // Double Reward
-    public const int REWARD_3 = 10000; // Extra Reward
+    public const float INITIAL_SPEED = 1.5f; // Min 1 Max 10
+    public const float TIMER = 60f; 
+    public const float TIMER_REWARD = 5f; // A cada TIMER_REWARD (tempo) recebe REWARD_1
+    public const int BONUS_REWARD_2 = 12; // A cada BONUS_REWARD_2 (vezes) recebe REWARD_2
+    public const float SPEED_TIMER_1 = 5f; // Tempo para subir a primeira velocidade
+    public const float SPEED_TIMER_2 = 10f; // Tempo para subir a segunda velocidade
+    public const float SPEED_TIMER_3 = 15f; // Tempo para subir a terceira velocidade
+    public const int UP_SPEED_TIMER_1 = 12; // Vezes para subir o speedtimer 1
+    public const int UP_SPEED_TIMER_2 = 6; // Vezes para subir o speedtimer 2
+    public const float SPEED_INCREASE_1 = 0.3f; // Primeira Velocidade
+    public const float SPEED_INCREASE_2 = 0.25f; // Segunda Velocidade
+    public const float SPEED_INCREASE_3 = 0.2f; // Terceira Velocidade
+    public const int REWARD_1 = 10; // Reward
+    public const int REWARD_2 = 1000; // Double Reward
+    public const int REWARD_3 = 5000; // Extra Reward
 
     #endregion Constants
 }
