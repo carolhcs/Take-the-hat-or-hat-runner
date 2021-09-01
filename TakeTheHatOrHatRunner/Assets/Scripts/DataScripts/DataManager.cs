@@ -83,6 +83,7 @@ public static class DataManager
     public const int REWARD_1 = 10; // Reward
     public const int REWARD_2 = 1000; // Double Reward
     public const int REWARD_3 = 5000; // Extra Reward
+    public const int DOUBLE_TRAP_INITICAL_PERCENT = 0; // A cada 100 pontos + 1% de chance;
 
     #endregion Constants
 }

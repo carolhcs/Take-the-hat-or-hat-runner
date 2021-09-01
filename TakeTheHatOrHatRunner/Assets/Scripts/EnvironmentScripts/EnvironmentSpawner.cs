@@ -24,7 +24,12 @@ public class EnvironmentSpawner : MonoBehaviour
         //TODO: ...
         int index = 0;
 
-        if (kind.Equals("Trap")) InstantiateObject(trapsManager.ChooseTrap(), -1.5f);
+        if (kind.Equals("Trap")) 
+        { 
+            InstantiateObject(trapsManager.ChooseTrap(), -1.5f);
+            // TODO: pegar a pontuação atual e contar a chance de gerar mais um trap, usar o random para gerar ou não
+
+        }
         else if (kind.Equals("Floor")) InstantiateObject(objectSpawnerPrefab[index]);
 
     }
@@ -48,6 +53,26 @@ public class EnvironmentSpawner : MonoBehaviour
     {
         GameObject newGameObject = Instantiate(gameObjectPrefab,
             new Vector3(this.gameObject.transform.position.x, yPosition,
+            this.gameObject.transform.position.z), Quaternion.identity);
+
+        newGameObject.transform.SetParent(this.gameObject.transform);
+    }
+
+    private void InstantiateSecondObject(GameObject gameObjectPrefab, float distance)
+    {
+        float newPositionX = this.gameObject.transform.position.x + distance;
+        GameObject newGameObject = Instantiate(gameObjectPrefab,
+            new Vector3(newPositionX, this.gameObject.transform.position.y,
+            this.gameObject.transform.position.z), Quaternion.identity);
+
+        newGameObject.transform.SetParent(this.gameObject.transform);
+    }
+
+    private void InstantiateSecondObject(GameObject gameObjectPrefab, float distance, float yPosition)
+    {
+        float newPositionX = this.gameObject.transform.position.x + distance;
+        GameObject newGameObject = Instantiate(gameObjectPrefab,
+            new Vector3(newPositionX, yPosition,
             this.gameObject.transform.position.z), Quaternion.identity);
 
         newGameObject.transform.SetParent(this.gameObject.transform);
